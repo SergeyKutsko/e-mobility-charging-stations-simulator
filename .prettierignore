@@ -1,0 +1,10 @@
+coverage
+dist
+outputs
+.nyc_output
+ui/web
+pnpm-lock.yaml
+package-lock.json
+performanceRecords.json
+*.clinic-*
+*-audit.json

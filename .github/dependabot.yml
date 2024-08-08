@@ -1,0 +1,31 @@
+# Docs: https://docs.github.com/en/code-security/supply-chain-security/configuration-options-for-dependency-updates
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: daily
+    labels:
+      - 'github-actions'
+    reviewers:
+      - 'jerome-benoit'
+      - 'olivierbagot'
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+    labels:
+      - 'dependencies'
+    reviewers:
+      - 'jerome-benoit'
+      - 'olivierbagot'
+    versioning-strategy: increase
+  - package-ecosystem: pip
+    directory: 'tests/ocpp-server'
+    schedule:
+      interval: daily
+    labels:
+      - 'dependencies'
+    reviewers:
+      - 'jerome-benoit'
+      - 'olivierbagot'
